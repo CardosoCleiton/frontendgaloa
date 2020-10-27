@@ -1,0 +1,69 @@
+
+.txt_1{
+   font-size: 14.7px;
+   display:block;
+   margin: 20px;
+   text-align: justify;
+   padding-right: 20px;
+   color:gray;
+}
+
+.txt_2{
+   font-size: 14.7px;
+   display:block;
+   margin: 20px;
+   text-align: justify;
+   padding-right: 20px;
+   color:gray;
+}
+.txt_strong{
+ color: rgb(0, 0, 0);
+}
+.logo{
+    display: block;
+    text-align: center;
+    width:auto;
+    height: auto;
+    margin-left: 20px;
+    margin-right:20px;
+   
+ }
+
+ .logo_Galoa{
+    width:13em;
+    margin-bottom: 5px;
+ }
+
+ button{
+   background: rgb(113,71,142);
+   border-radius:7px;
+   width:235px;
+   height:40px;
+   border:none;
+   text-align: center;
+   color:white;
+   font-size: 16px;
+ }
+
+.container {
+
+    position:relative; 
+    align-items: center;
+    justify-items: center;
+
+    justify-self: center;
+    align-self: center;
+   
+    border-top: 2px solid rgb(194, 194, 194);
+    margin:auto;
+    
+    display: flex;
+    
+    background:white;
+
+    bottom:0;
+
+    height: 181px;
+    width: 1146px;
+}
+

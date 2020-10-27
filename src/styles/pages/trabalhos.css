@@ -1,0 +1,270 @@
+.sectionFather{
+
+    position:relative;
+    margin:auto;
+    background-color:white;
+    display: flex;
+
+    width: 1146px;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+    height: auto;
+    font: Quicksand;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #5C5C5C;
+}
+
+.win_video_scroll{
+    top:0;
+    position: absolute;
+    display:flex;
+
+    width:1066px;
+    align-self:center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+.broken{
+    top:0;
+    right:0;
+    position: relative;
+    display:flex;
+
+    flex-direction: column;
+    flex-flow: column-nowrap;
+    height:auto;
+    justify-content: flex-start; 
+    justify-content: space-around;
+    align-items: flex-stretch;
+    flex: 1;
+    align-content: stretch;
+}
+
+.sectionSon1{
+    position: relative;
+    display:flex;
+    width: 1066px;
+    background:white;
+    align-items: center;
+    height: 800px;
+}
+
+.item_1 {
+    position: relative;
+    display:flex;
+    width: 783px;
+    height: 439px;
+	background: tomato;
+	text-align: center;
+    font-size: 1.5em;
+}
+
+.box_scroll{
+    position:absolute;
+    right:0;
+    margin: 0 auto;
+}
+
+.scroll{
+    display:block;
+    position: absolute;
+    width: 242px;
+    height: 439px;
+    bottom:0;
+    right: 0;
+    overflow: auto;
+}
+
+.title_video{
+    position: relative;
+    width:783px;
+    height: 54px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.title_scroll{
+    position: relative;
+    height: 54px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.citar{
+    position:absolute;
+    bottom:0;
+    right:0;
+    font: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #ED7839;
+
+    margin-bottom: -6px;
+}
+
+.par_title{
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: justify;
+
+    font: Roboto;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #ED7839;
+
+    border: none;
+    }
+
+.table{
+    width: 242px;
+    height: 439px;
+    border-radius: 3px;
+    background:white;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    margin-left:0.3px;
+}
+
+.th1{
+
+    height:45px;
+    background:#FDF1EB;
+    width: 242px;
+    font: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    color: #4E4E4E;
+    text-align:left;
+    padding-left: 19px;
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .sectionFather{
+        position: absolute;;
+        margin-top:16.1em;
+        background-color:white;
+        width:320px;
+        max-width: 480px;
+        font: Quicksand;
+    }
+
+    .win_video_scroll{
+        position:relative;
+        height:auto;
+    }
+
+    .sectionSon1{
+        position:relative;
+        height: auto;
+        
+        width:320px;
+        background:white;
+        
+    }
+
+    .item_1 {
+        position: relative;
+        align-items: center;
+        width:320px;
+        max-width:480px;
+        height:auto;
+    }
+    
+    .title_video{
+    
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        
+    }
+
+    .broken{
+        position:relative;
+        display: block;
+
+        width:320px;
+        max-width:480px;
+        height:auto;
+
+    }
+    .par_title{
+        
+        position:relative;
+        font: Roboto;
+
+        width:320px;
+        max-width:480px;
+        height:auto;
+        font-size:0.9em;
+        color: #ED7839;
+        }
+
+        .box_scroll{
+            background:yellow;
+            position:relative;
+
+            margin: 0 auto;
+            width:100%;
+            margin: 0 auto;
+        }
+
+        .citar{
+            background:black;
+            position: relative;
+
+            text-align:left;
+            font: Roboto;
+
+            margin-left:10px;
+
+            font-weight: 500;
+            font-size: 14px;
+
+            letter-spacing: 0.01em;
+            color: #ED7839;
+        }
+
+        .table{
+            position: relative;
+
+            width: 300px;
+            height: 439px;
+
+            border-radius: 3px;
+            background:white;
+
+     
+            border: 1px solid #ECECEC;
+            box-sizing: border-box;
+        }
+        
+        .th1{
+        
+            height:45px;
+            background:#FDF1EB;
+            width: 290px;
+            font: Roboto;
+            font-weight: 500;
+            font-size: 20px;
+            color: #4E4E4E;
+        }
+
+}

@@ -1,0 +1,337 @@
+
+.data_user{
+ padding-right:0.7em;
+ display:flex;
+ flex-direction:column;
+ align-items: flex-end;
+ margin-right: 1px;
+
+}
+
+.txt_welcome{
+font: Quicksand;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #333333;
+
+}
+
+.txt_email{
+font: Quicksand;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+color: #333333;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  margin:10px;
+}
+
+
+.foto{
+background: #F5F5F5;
+border: 1px solid #F5F5F5;
+box-sizing: border-box;
+border-radius:50em;
+height:45px;
+width:45px;
+}
+
+.language select{
+
+  background:none;
+  padding: 0em 0em 0em 1.3em;
+
+ 
+  border-radius: 2px;
+  border-color:#333333;
+
+  width: 97px;
+  height: 34px;
+
+  font: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  appearance: none; 
+  outline:none;
+}
+
+.div_text_top_header{
+  margin-left:40px;
+}
+
+.div_top_user{
+  position: absolute;
+  margin-right: 40px;
+  right:0;
+  display:flex;
+  align-items: center;
+}
+
+.custom-arrow::before,
+.custom-arrow::after{
+  --size:0.4rem;
+  content:'';
+  position:absolute;
+  width:0;
+  height:0;
+}
+
+.custom-arrow::before{
+  border-left:var( --size) solid transparent;
+  border-right:var( --size) solid transparent;
+  border-top:var( --size) solid black;
+  top:40%;
+}
+
+
+.language{
+  position: relative;
+}
+
+.custom-arrow{
+  top:0;
+  right:0;
+  position: absolute;
+  display:block;
+  background:none;
+  height: 100%;
+  width:1rem;
+  pointer-events:none;
+  padding-right: 1.2em;
+}
+
+
+#header .txt1{
+    font: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #725C5C;
+    text-align: left;
+}
+
+#header .txt2{
+    font: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: #725C5C;
+    text-align: left;
+}
+
+#header .txt3{
+    font: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #725C5C;
+    text-align: left;
+}
+
+#header.main_title{
+   position:absolute;
+   display:flex;
+   grid-area: a;
+  }
+
+#header.linguage{
+    position:absolute;
+    text-align: right;
+    grid-area: b;
+  }
+
+#header.user {
+    position:absolute;
+    display:flex;
+    text-align:left;
+    grid-area: c;
+  }
+
+#header{
+    background:#FDF1EB;
+    display:grid;
+    
+
+    position:relative;
+    margin:auto;
+
+    max-width: 1146px;
+    height:auto;
+    grid-gap: 1px;
+    grid-template-columns: 14fr 1fr 5fr;
+    grid-template-areas: "a . ." 
+                         ". b ." 
+                         ". . c" 
+  }
+
+  
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  #header{
+
+    position:absolute;
+
+    background:#FDF1EB;
+    display:block;
+    flex-direction: column;
+    
+    margin:auto;
+    height:auto;
+  }
+
+.main_title{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-top: 10em;
+    height: auto;
+    width:100%;
+   }
+
+ .div_text_top_header{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    width:100%;
+  }
+
+.txt1{
+    display:flex;
+    font: Roboto;
+    color: #725C5C;
+}
+
+.txt2{
+  font: Roboto;
+  color: #725C5C;
+}
+
+#header.txt3{
+  font: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  color: #725C5C;
+
+}
+
+
+#header .div_top_user{
+  
+  position:absolute;
+  top:0;
+  right:0.5em;
+  display:flex;
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 85%;
+}
+
+#header .user{
+  position: relative;
+  display:flex;
+  width: 50%;
+  margin:auto
+}
+
+.data_user{
+  display:flex;
+  flex-direction:column;
+  margin:auto
+ }
+
+
+
+#header.txt_welcome{
+  font: Quicksand;
+  font-size: 1em;
+  color: #725C5C;
+  }
+  
+  #header.txt_email{
+  font: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  color: #725C5C;
+  }
+
+  .language select{
+
+    background:none;
+    padding: 0em 0em 0em 1em;
+  
+   
+    border-radius: 0.1em;
+    border-color:#333333;
+  
+    width: 70px;
+    height: 30px;
+  
+    font: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+   
+    appearance: none; 
+    outline:none;
+  }
+  
+  .custom-arrow::before,
+.custom-arrow::after{
+  --size:0.4rem;
+  content:'';
+  position:absolute;
+  width:0;
+  height:0;
+}
+
+.custom-arrow::before{
+  border-left:var( --size) solid transparent;
+  border-right:var( --size) solid transparent;
+  border-top:var( --size) solid black;
+  top:40%;
+}
+
+
+.language{
+  position: relative;
+}
+
+.custom-arrow{
+  top:0;
+  right:0;
+  position: absolute;
+  display:block;
+  background:none;
+  height: 100%;
+  width:1rem;
+  pointer-events:none;
+  padding-right: 2em;
+}
+
+.foto{
+  background: #F5F5F5;
+  border: 1px solid #F5F5F5;
+  box-sizing: border-box;
+  border-radius:50em;
+  height:40px;
+  width:40px;
+  margin-left: 7px;
+  
+
+  }
+  
+}

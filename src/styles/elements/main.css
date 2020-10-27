@@ -1,0 +1,25 @@
+body { 
+    background:rgb(106, 106, 148);
+    position:relative;
+  
+    max-width:1366px;
+    height: 1080px;
+    margin: auto;
+
+    text-align: center;
+    justify-items: center;
+  
+    justify-self: center;
+    align-self: center;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    body{
+       position: relative;
+       width: 320px;
+       max-width: 480px;
+       height:auto;
+      }
+  
+    }
