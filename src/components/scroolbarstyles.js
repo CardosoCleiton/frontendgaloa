@@ -10,8 +10,7 @@ export const Scroll = styled.div`
     padding-left:10px;
     padding-right:10px;
 
-    text-align:justify;
-
+    text-align:left;
 
     margin-top:5px;
     margin-left:3px;

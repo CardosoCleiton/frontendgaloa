@@ -8,6 +8,7 @@ import iconeDoi from '../images/doi.svg';
 function Btns_scrool() {
     return (
             <div className="box_scroll">
+                
                 <div className="title_scroll">
                     <Bts>
                         <Bt_Download >
@@ -25,19 +26,47 @@ function Btns_scrool() {
                         <p>COMO CITAR ESSE TRABALHO?</p>
                         </div>
                         </div>
+                
                 <table className ="table">
-                    <tr >
+                    <tr>
                         <th className="th1">Detalhes</th>
                     </tr>
                     <tr>
-                       <td>
+                       <td>  
                        <Scroll>
-                        <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... ver mais </span>
+
+                       <span>
                         
+                        <div className="bloco_1">   
+                        <p>Tipo de Apresentação: <strong>Pôster</strong></p>
+                        <p>Eixo temático:<strong>Alimentação e saúde (AS)</strong> </p> 
+                        <p>Palavras-chaves:<strong> Alimentos funcionais, alimentação escolar.</strong></p>
+                        
+                        </div>
+
+                        <div className="bloco_2">
+                        <strong> Autores: </strong>
+                        <p>Galileo Galilei¹</p>
+                        <p>Berta Lange de Morretes²</p>
+                        <p>Isaac Newton³</p>
+                        <p>Cesar Lattes¹</p>
+                        <p>Stephen Hawking⁴</p>
+                        </div>
+
+                        <div className="bloco_3">
+                        <p> ¹Universidade Estadual de Campinas </p>
+                        <p> ²Universidade de São Paulo </p> 
+                        <p> ³Instituto Nacional de Pesquisas Espaciais</p>
+                        <p> ⁴Universidade Federal do Rio de Janeiro</p>
+                        </div>
+
+                        </span>
+
                         </Scroll>   
                        </td>
                     </tr>
                 </table>
+
             </div>
     )
 }
