@@ -6,7 +6,7 @@
     position:absolute;
     left: 0;
     padding-left: 15px;
-    padding-top: 10px;
+    
     width:1058px;
     height:45px;
 
@@ -15,6 +15,16 @@
     box-sizing: border-box;
     border-radius: 3px 3px 0px 0px; 
 
+    position: absolute;
+
+    font: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #4E4E4E;
 }
 
 .p{

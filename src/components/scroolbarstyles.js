@@ -4,8 +4,14 @@ export const Scroll = styled.div`
     width: 230px;
     height:360px;
     overflow: auto;
-    background:white;
+    background:none;
     border-radius:3px;
+
+    padding-left:10px;
+    padding-right:10px;
+
+    text-align:justify;
+
 
     margin-top:5px;
     margin-left:3px;
