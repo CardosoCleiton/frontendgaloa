@@ -1,6 +1,21 @@
-.video{
+.item_1 {
+    position: relative;
+    display:flex;
     width: 783px;
-    height:439px;
+    height: 439px;
+	background: black;
+	text-align: center;
+    font-size: 1.5em;
+}
+.video{
+    border-radius:4px;
 }
 
-
+.title_video{
+    position: relative;
+    width:783px;
+    height: 54px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}

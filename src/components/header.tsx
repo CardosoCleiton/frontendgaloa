@@ -1,7 +1,11 @@
 //import React from 'react';
 import React, {useState} from 'react';
+
 import '../styles/elements/navbar.css';
 import '../styles/elements/header.css';
+import Select_language from "./select_language"
+
+
 import print_User from '../images/print_User.jpg';
 
 interface TitleProps{
@@ -33,27 +37,17 @@ function Header(){
 
           </div>
 
-          <div className="div_top_user" > 
-            <div className="language">
-            <select>
-            <option  value="0"> PT/BR </option>
-              <option value="1">Português</option>
-              <option value="2">English</option>
-              <option value="3">Chinês</option>
-              <option value="4">Alemão</option>
-            </select>
-            <span className="custom-arrow"></span>
-            </div>
-
-
-            <div className="user">
+          
+           <Select_language />
+         
+           <div className="user">
               <div className="data_user">
-              <p className="txt_welcome">Bem vindo!</p>
-              <p className="txt_email">cleiton_kssa@hotmail.com</p>
+               <p className="txt_welcome">Bem vindo!</p>
+               <p className="txt_email">cleiton_kssa@hotmail.com</p>
               </div>
-          </div>
-            <img src={print_User} alt="User" className="foto"/>
-          </div>
+            
+              <img src={print_User} alt="User" className="foto"/>
+              </div>
 
         </header>
   )

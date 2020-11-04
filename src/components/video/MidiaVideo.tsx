@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactPlayer from 'react-player';
+import './video.css'
 
 function MidiaVideo() {
     return (
-        <div className="video">
+        <div className="_video_">
             <div className="title_video">
                 <p className="par_title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP
                 </p>

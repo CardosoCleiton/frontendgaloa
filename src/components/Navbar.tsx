@@ -16,6 +16,7 @@ import doi from "../images/menu_hamburguer.svg"
 function Navbar() {
     const [sidebar,setSidebar] = useState(true);
     const showSidebar = () => setSidebar(!sidebar);
+    
     return (
     <div id ="nav">
         <IconContext.Provider value={{color:'#EE7A3A'}}>
@@ -30,30 +31,30 @@ function Navbar() {
 
             <nav className = {sidebar ? 'nav-menu active' : 'nav-menu' } >   
                 <ul className="nav-menu-items" onClick={showSidebar}>
-                <div className = "slaca">
-                <p>SLACA2019</p>
-                </div>
-        
-                <img src={logoImg} alt="Logo"/>
+                    <div className = "slaca">
+                     <p>SLACA2019</p>
+                    </div>
+            
+                    <img src={logoImg} alt="Logo"/>
 
 
-                {/*aqui ia o bt_fechar*/}
-                <li className ="nav-toglle">
-                   <Link to="#" >
-                     <AiIcons.AiOutlineClose  className='menu-bars'/>
-                   </Link>
-                </li>
-                   
-                    {SidebarData.map((item, index) =>{
-                        return (
-                            <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                               {/* {item.icon}*/}
-                                <span>{item.title}</span>
-                            </Link>
-                            </li>
-                        )
-                    })}   
+                    {/*aqui ia o bt_fechar*/}
+                    <li className ="nav-toglle">
+                    <Link to="#" >
+                        <AiIcons.AiOutlineClose  className='menu-bars'/>
+                    </Link>
+                    </li>
+                    
+                        {SidebarData.map((item, index) =>{
+                            return (
+                                <li key={index} className={item.cName}>
+                                <Link to={item.path}>
+                                {/* {item.icon}*/}
+                                    <span>{item.title}</span>
+                                </Link>
+                                </li>
+                            )
+                        })}   
                 </ul>
             </nav>
             </IconContext.Provider>

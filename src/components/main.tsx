@@ -32,8 +32,8 @@ function Main(){
                 <Route path='/trabalhos' component ={Trabalhos} />
                 </div>
              </Switch> 
-            <Footer/>
-          <Navbar/>
+           <Footer/>
+         <Navbar/>
         </Router>
       </main>
       </div>
