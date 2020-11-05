@@ -2,27 +2,29 @@
 
     position:relative;
     margin:auto;
+
     background-color:white;
-    display: flex;
+
+    flex-direction: column;
+    display:block;
 
     width: 1146px;
+    min-height:auto;
+    max-height: auto;
 
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
-
-    height: auto;
     font: Quicksand;
     font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.02em;
     color: #5C5C5C;
+    padding-bottom: 30px;
 }
 
 .win_video_scroll{
+
+    background:none;
     top:0;
-    position: absolute;
+    position:relative;
     display:flex;
 
     width:1058px;
@@ -49,22 +51,31 @@
 }
 
 .sectionSon1{
-    position: relative;
-    display:flex;
+    order:1;
     width: 1058px;
     background:white;
     align-items: center;
-    height: 800px;
+
+    min-height:auto;
+    max-height:auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .sectionSon2{
-    position:absolute;
-    display:flex;
 
-    top:68%;
+  
+    order:2;
+
     width: 1058px;
-    height:189px;
+    min-height:189px;
+    max-height: auto;
+
     background:white;
+
+
 
     border: 1px solid #ECECEC;
     box-sizing: border-box;
@@ -79,17 +90,10 @@
 
     color: #5C5C5C;
 
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 
-    text-align:justify;
-
-    justify-items: center;
-    justify-content: center;
-   
 }
 
 .boxTextScroll{

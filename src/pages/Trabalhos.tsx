@@ -23,15 +23,8 @@ function Trabalhos(){
             <section className="sectionSon2" >  
             <Resumo/>
             </section>
-
             
-           
-            
-
          </section>
-
-         
-
        </section>
     )
 }

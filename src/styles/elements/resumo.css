@@ -1,22 +1,19 @@
 .resumo{
-    width:1028px;
-    height:114px;
+    min-width: auto;
+    max-width:1028px;
+    min-height:114px;
+    max-height: auto;
+    justify-items: center;
+    align-items: center;
 }
-.h1{
-    position:absolute;
-    left: 0;
+
+h1{
+
     padding-left: 15px;
-    
-    width:1058px;
+    width:1056px;
     height:45px;
-
     background: #FDF1EB;
-    border: 1px solid #ECECEC;
-    box-sizing: border-box;
     border-radius: 3px 3px 0px 0px; 
-
-    position: absolute;
-
     font: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -27,6 +24,36 @@
     color: #4E4E4E;
 }
 
-.p{
-    margin-top: 60px;
+.div_Txt{
+    width:1028px;
+    min-height:114px;
+    max-height:auto;
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left: 15px;
+    margin-right:auto;
+    
+
+    align-items: center;
+    text-align:justify;
+    background:none;
+}
+
+.btnLookMore{
+
+    font: Quicksand;
+    
+    font-style: normal;
+    font-weight:700;
+    
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing:22,75px;
+
+    color: #ED7839;
+
+}
+
+#mais{
+    display:none;
 }
