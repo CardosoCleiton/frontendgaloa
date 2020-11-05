@@ -54,6 +54,10 @@ h1{
 
 }
 
-#mais{
+.mais{
+    display:block;
+}
+
+.menos{
     display:none;
 }
