@@ -4,6 +4,7 @@ import '../../src/styles/pages/trabalhos.css'
 import MidiaVideo from '../components/video/MidiaVideo'
 import Btns_scrool from '../components/btns_scrool'
 import Resumo from '../components/resumo'
+import Discussoes from '../components/discussoes'
 
 function Trabalhos(){
     return (
@@ -22,6 +23,10 @@ function Trabalhos(){
 
             <section className="sectionSon2" >  
             <Resumo/>
+            </section>
+
+            <section className="sectionSon3" >  
+            <Discussoes/>
             </section>
             
          </section>
