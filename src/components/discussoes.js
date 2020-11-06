@@ -8,6 +8,8 @@ import Light from '../images/icone3_light.svg'
 
 import BtnCriarTopico from './btnCriarTopico'
 
+import InserirTopico from './inserirTopico'
+
 export default class Discussoes extends React.Component {
 
 
@@ -15,6 +17,8 @@ export default class Discussoes extends React.Component {
         return(
             <div className="discussoes">
                 <h1>Discussões</h1>
+
+                <InserirTopico/>
                
                 <div className="compartilhe">
                     

@@ -19,7 +19,7 @@ import styled from "styled-components";
 
     color: #FFFFFF;
 
-    margin:2px;
+    margin:0px;
 
 
     background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
@@ -27,8 +27,10 @@ import styled from "styled-components";
     border-radius: 4px;
 
 
-    img{
-        margin-right:1px;
+    .imgBtnTopico{
+        margin-right:7px;
+        width:20px;
+        height:20px;
     }
 `;
 
