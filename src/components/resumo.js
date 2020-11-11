@@ -8,6 +8,7 @@ export default class Resumo extends React.Component {
     constructor (props){
         super(props);
         this.state = {clique: false};
+        
         this.clicou = this.clicou.bind(this);
     }
     

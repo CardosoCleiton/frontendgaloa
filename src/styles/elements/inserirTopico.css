@@ -4,12 +4,16 @@
     display:block;
     flex-direction:column;
     width:1028px;
-    background:none;
     margin-left:15px;
+    margin-bottom: 30px;
     margin-right: auto;
+
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+    background:none;
 
     
     padding-top: 20px;
+    padding-bottom: 40px;
 
     align-items: center;
     justify-content: center;
@@ -50,7 +54,7 @@ b{
     }
 
 
-#txtAreaConteudo{
+.txtAreaConteudo{
 
     display:flex;
     overflow: hidden;
@@ -61,27 +65,33 @@ b{
     min-height: 114px;
     padding-bottom:55px;
 
+    font: Quicksand;
+    font-style: normal;
+    font-weight:auto;
+
 }
+
+
+.txtAreaConteudobold{
+    
+    font-weight:bold;
+
+}
+
+.txtAreaConteudoitalico{
+    font-style: italic;
+}
+
+
 
 textarea{
     outline:none;
     resize:none;
-   
     overflow-y: hidden;
-   
-    
-    
     border: 1px solid #CCCCCC;
-   
     border-radius: 3px;
-
-    font: Quicksand;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
-    
     color: #4D4D4D;   
-
 }
 
 .div_Estilo_txt{
@@ -92,10 +102,10 @@ textarea{
     width:1023px;
     height: 32px;
 
-    margin-left:2px;
+    margin-left:2.5px;
     margin-right: auto;
 
-    margin-bottom:1px;
+    margin-bottom:41px;
     
 
     background: hsl(187, 24%, 93%);

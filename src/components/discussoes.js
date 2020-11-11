@@ -11,17 +11,38 @@ import BtnCriarTopico from './btnCriarTopico'
 import InserirTopico from './inserirTopico'
 
 export default class Discussoes extends React.Component {
+  constructor (props){
+    super(props);
+    this.state = {clique: false};
+    
+    this.clicou = this.clicou.bind(this);
+}
 
+clicou(e){ 
+   var status = this.state.clique;
+   if (status === false){
+       status = true
+       console.log("clicou true")
+   }else{
+       status = false
+       console.log("clicou false")
+   }
+   this.setState({clique: status});
+   e.preventDefault();
+}
 
-    render(){
+  
+  
+  render(){
         return(
             <div className="discussoes">
                 <h1>Discussões</h1>
+                <div className={this.state.clique ? "isVisible":"notVisible"}> 
+                <InserirTopico/>        
+                </div>
 
-                <InserirTopico/>
-               
                 <div className="compartilhe">
-                    
+    
                    <div className="divCompartilhe_1">
                      <p className="txtCompartilhe_1">Compartilhe suas ideias ou dúvidas com os autores! </p>
                    </div>
@@ -38,10 +59,12 @@ export default class Discussoes extends React.Component {
 
 
                    <div className = 'btn_topico'>
-                   <BtnCriarTopico text= "criar tópico"/>
+                   <BtnCriarTopico onPress = {this.clicou.bind(this)}  text= "criar tópico"/>
                    </div>
 
                 </div>
+
+
             </div>           
         )
     }
