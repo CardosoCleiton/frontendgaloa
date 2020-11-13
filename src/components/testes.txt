@@ -1,0 +1,82 @@
+remover(e) {
+    /*
+            const numeros = ["item 1", "item 2","item 3", "item 4","item 5", "tem 6"];
+            const newNum = numeros.map(function(item){
+                return item === "item 1"});
+            console.log(newNum)
+            // item 1
+    */
+    
+    
+    /*
+            const estilo = [
+                { name: "txtAreaConteudo "},
+                { name: "txtAreaConteudobold "},
+                { name: "txtAreaConteudoitalic "}
+              ];
+    
+    
+              const isNormal = estilo => estilo.name === "txtAreaConteudo ";
+              const normal = estilo.filter(isNormal);
+              console.log(normal);
+    
+              const isBold = estilo => estilo.name === "txtAreaConteudobold ";
+              const bold = estilo.filter(isBold);
+              console.log(bold);
+    
+    
+              const isItalic = estilo => estilo.name === "txtAreaConteudoitalic ";
+              const italic = estilo.filter(isItalic);
+              console.log(italic);
+    
+    
+    
+    */
+              console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+              const estilo3 = [{name: "txtAreaConteudo "},{name: "txtAreaConteudobold "},{name: "txtAreaConteudoitalic "}];
+              const res = estilo3.findIndex( estilo3 => estilo3.name === "txtAreaConteudoitalic " ); 
+              //console.log(estilo3)
+              console.log(res)
+              console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    
+    
+              const index2 = estilo3.filter(function(item){ return item.name !== "txtAreaConteudobold "});
+              console.log(index2);
+              console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    
+    
+              const index = estilo3.filter( estilo3 => estilo3.name === "txtAreaConteudo ");
+              console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+              console.log(index);
+    
+    
+    /*
+              if (index > -1) {
+                estilo3.splice(index, 1);
+              }
+              
+             
+              //console.log(estilo3)
+              console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+    */ 
+    /*
+    
+              const estilo2 = ["txtAreaConteudo ","txtAreaConteudobold ","txtAreaConteudoitalic "]
+              
+              console.log(estilo2)
+              const index = estilo2.findIndex(item => item.estilo2 === "txtAreaConteudobold ");
+    
+    
+              console.log(index)
+    
+              if (index > -1) {
+                estilo2.splice(index, 1);
+              }
+              console.log(estilo2)
+    
+              */ 
+    
+            }
+    
+            
+    

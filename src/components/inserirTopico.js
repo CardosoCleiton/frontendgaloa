@@ -18,51 +18,15 @@ export default class InserirTopico extends React.Component {
         //this.res = this.res.bind(this);
     }
 
-    recebeArray(){
-    }
 
-    clicouBold(e){   
-        e.preventDefault();
-        const newArray = this.state.normal.map(function(item){return item;})
-        console.log("/////")
-        console.log(newArray)
-
-        const indexx = this.state.normal.findIndex(function (item){return item === "txtAreaConteudobold";}) 
-        console.log("/////")
-        console.log(indexx)
-        console.log("/////")
-
-        if(this.state.clicouB === true){
-            var statusB = false   
-            console.log(statusB)
-            console.log(this.state.normal)
-            if (indexx > -1) {
-                this.setState({
-                    normal: this.state.normal.splice(indexx,1)
-                  })
-              }
-           console.log(this.state.normal)
-        }
-                
-        if(this.state.clicouB === false){
-            var statusB = true
-            console.log(statusB)
-            this.setState({
-                normal: this.state.normal.push("txtAreaConteudobold")
-              })
-            console.log(this.state.normal)
-        }
-
-        this.setState({
-            clicouB: statusB
-          })
-    }
-  
     handleKeyDown(e) {
+        e.preventDefault();
         e.target.style.height = 'inherit';
         e.target.style.height = `${e.target.scrollHeight}px`; 
        // e.target.style.height = `${Math.min(e.target.scrollHeight,limit)}px`;
       }
+
+
 
     render(){
         return(
@@ -72,7 +36,7 @@ export default class InserirTopico extends React.Component {
                     <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
                 </div>
 
-                <form action="" >
+                <form onSubmit={this.HandleSubmit} >
 
                 <label >
                     <b>Assunto</b>
@@ -90,7 +54,7 @@ export default class InserirTopico extends React.Component {
                     <div className="div_Img_2"> <img onClick={this.clicouItalic} src={img_I}></img></div>
 
                     <div className="btn_enviar">
-                    <BtnEnviar text ="enviar"></BtnEnviar>
+                    <BtnEnviar type="submit" onClick={this.props.onPress} text ="enviar"></BtnEnviar>
                     </div>
                 </div>
                 </form>
