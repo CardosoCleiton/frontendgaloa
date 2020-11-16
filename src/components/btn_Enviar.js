@@ -9,7 +9,7 @@ export default class BtnEnviar extends React.Component{
     render(){
         
         return(
-                <Bt_Enviar onClick={this.props.onSubmit}  > {this.props.text} </Bt_Enviar>
+                <Bt_Enviar onClick={this.props.onSubmit}> {this.props.text} </Bt_Enviar>
         )
     }
 }
