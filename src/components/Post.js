@@ -32,10 +32,12 @@ export default class Post extends React.Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
     }
 
-    handleSubmit(e){
+handleSubmit(e){
 
        // alert(this.state.novoAssuntoText)
        //alert(this.state.novoConteudoText)
+
+      // this.setState({novoConteudoText: e.target.value})
 
         this.setState({
             comments:[
@@ -77,23 +79,23 @@ export default class Post extends React.Component {
                 <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
             </div>
 
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={this.handleSubmit}>
 
             <label >
                 <b>Assunto</b>
-                <textarea rows="1"  placeholder="Defina um tópico sucinto para notificar os autores..." className ='txtAreaAssunto' value = {this.state.novoAssuntoText} onChange={this.handleAssuntoChange}></textarea>
+                <textarea id="assunto" rows="1" aria-required="true"  placeholder="Defina um tópico sucinto para notificar os autores..." className ='txtAreaAssunto' value = {this.state.novoAssuntoText} onChange={this.handleAssuntoChange} required></textarea>
             </label>
 
             <label>
                 <b >Conteudo</b>
-                <textarea  rows="4" className ="txtAreaConteudo" value={this.state.novoConteudoText}  onChange={this.handleConteudoChange} ></textarea>
+                <textarea id="conteudo" aria-required="true" onChange={this.handleConteudoChange} value = {this.state.novoConteudoText}  rows="4" className ="txtAreaConteudo" required ></textarea>
             </label>
 
             <div className="div_Estilo_txt">
                 <div className="div_Img_1"> <img onClick={this.clicouBold} src={img_B}></img></div>
                 <div className="div_Img_2"> <img onClick={this.clicouItalic} src={img_I}></img></div>
                 <div className="btn_enviar">
-                <BtnEnviar type="submit"   value ="Submit" onPress = {this.handleSubmit.bind(this)} text ="enviar"></BtnEnviar>
+                <BtnEnviar type="submit"  OnSubmit = {this.handleSubmit} text ="enviar"></BtnEnviar>
                 </div>
             </div>
             </form>
