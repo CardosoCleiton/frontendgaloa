@@ -1,8 +1,5 @@
 import React from 'react';
-//import img_1 from '../images/tres_pontinhos.svg';
-//import heart from '../images/coracao.svg'
 
-//import '../styles/elements/post.css'
 import '../styles/elements/post.css'
 
 import Comentarios from './Comentarios'
@@ -34,11 +31,6 @@ export default class Post extends React.Component {
 
 handleSubmit(e){
 
-       // alert(this.state.novoAssuntoText)
-       //alert(this.state.novoConteudoText)
-
-      // this.setState({novoConteudoText: e.target.value})
-
         this.setState({
             comments:[
                 ...this.state.comments,
@@ -61,13 +53,19 @@ handleSubmit(e){
        this.setState({novoConteudoText: e.target.value})
      }
 
-       
+       /*
     handleKeyDown(e) {
         e.preventDefault();
         e.target.style.height = 'inherit';
         e.target.style.height = `${e.target.scrollHeight}px`; 
        // e.target.style.height = `${Math.min(e.target.scrollHeight,limit)}px`;
-      }
+      }*/
+
+    handleKeyDown(e) {
+        e.target.style.height = 'inherit';
+        e.target.style.height = `${e.target.scrollHeight}px`; 
+        // e.target.style.height = `${Math.min(e.target.scrollHeight,limit)}px`;
+    }
 
     render(){
         return(
@@ -83,19 +81,36 @@ handleSubmit(e){
 
             <label >
                 <b>Assunto</b>
-                <textarea id="assunto" rows="1" aria-required="true"  placeholder="Defina um tópico sucinto para notificar os autores..." className ='txtAreaAssunto' value = {this.state.novoAssuntoText} onChange={this.handleAssuntoChange} required></textarea>
+                <textarea
+                id="assunto" 
+                rows="1"  
+                placeholder="Defina um tópico sucinto para notificar os autores..." 
+                className ='txtAreaAssunto' 
+                onChange={this.handleAssuntoChange}
+                value = {this.state.novoAssuntoText}
+                required>
+                </textarea>
             </label>
 
             <label>
                 <b >Conteudo</b>
-                <textarea id="conteudo" aria-required="true" onChange={this.handleConteudoChange} value = {this.state.novoConteudoText}  rows="4" className ="txtAreaConteudo" required ></textarea>
+                <textarea  
+                id="conteudo"   
+                rows="4" 
+                className ="txtAreaConteudo" 
+                onKeyDown={this.handleKeyDown}
+                onChange={this.handleConteudoChange}
+                value = {this.state.novoConteudoText} 
+                required 
+                >
+                </textarea>
             </label>
 
             <div className="div_Estilo_txt">
                 <div className="div_Img_1"> <img onClick={this.clicouBold} src={img_B}></img></div>
                 <div className="div_Img_2"> <img onClick={this.clicouItalic} src={img_I}></img></div>
                 <div className="btn_enviar">
-                <BtnEnviar type="submit"  OnSubmit = {this.handleSubmit} text ="enviar"></BtnEnviar>
+                <BtnEnviar type="submit" text ="enviar"></BtnEnviar>
                 </div>
             </div>
             </form>
@@ -109,9 +124,8 @@ handleSubmit(e){
                 //console.log(item.conteudo)
                         return <Comentarios key={index} assunto = {item.assunto} conteudo ={item.conteudo} />
                     })
-            } 
-                
-       
+            }                 
+    
         </div>
        )
     }
