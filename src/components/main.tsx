@@ -33,7 +33,7 @@ function Main(){
                 </div>
              </Switch> 
            <Footer/>
-         <Navbar/>
+        {/*<Navbar/>*/}
         </Router>
       </main>
       </div>

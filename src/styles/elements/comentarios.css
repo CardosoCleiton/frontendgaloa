@@ -67,20 +67,17 @@ b{
     padding: 23.13px;
     min-height: 114px;
     padding-bottom:55px;
-
     font: Quicksand;
-    font-style: normal;
-    font-weight:auto;
 }
 
 
 .txtAreaConteudobold{
-    
-    font-weight:bold;
 
+    font-weight:bold;
 }
 
 .txtAreaConteudoitalico{
+
     font-style: italic;
 }
 
