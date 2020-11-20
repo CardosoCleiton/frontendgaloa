@@ -1,8 +1,9 @@
 .postVisible{
     display:block;
     margin-top: 40px;
+    padding-bottom: 35px;
     width: 1028px;
-    height:148px;
+    height:auto;
     margin-left: 15px;
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
@@ -19,7 +20,7 @@
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-
+    
 }
 
 .txtAssunto{
@@ -56,10 +57,24 @@
     overflow:hidden;
     text-overflow: clip;
 }
+.divComentarioVisible{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    width:980.67px;
+    height:auto;
+    background:none;
+    overflow:hidden;
+    text-overflow: clip;
+}
 
 .txtComentario{
     display:block;
     text-align: left;
+
+  
+
+    height:auto;
 
     font: Quicksand;
     font-style: normal;
@@ -99,5 +114,5 @@
     margin-right: 15px;
 }
 .like{
-    margin-right: 15px;
+    margin-right: 5px;
 }
