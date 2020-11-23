@@ -1,9 +1,6 @@
 import React from 'react';
-
 import img_1 from '../images/tres_pontinhos.svg';
 import heart from '../images/coracao.svg'
-
-//import '../styles/elements/post.css'
 import '../styles/elements/comentarios.css'
 
 export default class Comentarios extends React.Component {

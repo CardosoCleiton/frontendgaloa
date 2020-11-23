@@ -5,7 +5,6 @@ import '../styles/elements/discussoes.css';
 import Hand from '../images/icone1_hand.svg'
 import Q_A from '../images/icone2_Q_A.svg'
 import Light from '../images/icone3_light.svg'
-
 import BtnCriarTopico from './btnCriarTopico'
 import Post from './Post'
 
@@ -41,7 +40,7 @@ clicou(e){
                 <div className= {this.state.clique ? "compartilheNotVisible":"compartilheVisible"}>
     
                    <div className="divCompartilhe_1">
-                     <p className="txtCompartilhe_1">Compartilhe suas ideias ou dúvidas com os autores! </p>
+                   <p className="txtCompartilhe_1">{}Compartilhe suas ideias ou dúvidas com os autores! </p>
                    </div>
 
                    <div className="imagens">
@@ -56,9 +55,9 @@ clicou(e){
 
                    <div className = 'btn_topico'>
                    <BtnCriarTopico onPress = {this.clicou.bind(this)}  text= "criar tópico"/>
+                  
                    </div>
                 </div>
-
                 <Post visibilidade = {this.state.clique ? "div_topico": "invible_div_topico"}/>
             </div>           
         )

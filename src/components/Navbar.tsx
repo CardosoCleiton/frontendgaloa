@@ -29,7 +29,7 @@ function Navbar() {
              </Link>
            </div>
 
-            <nav className = {sidebar ? 'nav-menu active' : 'nav-menu' } >   
+            <nav className = {sidebar ? 'nav-menu' : 'nav-menu active'} >   
                 <ul className="nav-menu-items" onClick={showSidebar}>
                     <div className = "slaca">
                      <p>SLACA2019</p>

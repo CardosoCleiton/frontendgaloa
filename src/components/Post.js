@@ -1,18 +1,14 @@
 import React,{useState} from 'react';
-
 import '../styles/elements/post.css'
-
 import Comentarios from './Comentarios'
-
+import '../styles/elements/discussoes.css'
 import img_B from '../images/Shape_B.svg'
 import img_I from '../images/Shape.svg'
 import BtnEnviar from './btn_Enviar'
-
-
+import BtnCriarTopico2 from './btnCriarTopico_2'
 
 
 export default class Post extends React.Component {
-
 
     constructor(props){
         super(props);
@@ -22,6 +18,8 @@ export default class Post extends React.Component {
             novoConteudoText:'',
             clicouB:false,
             clicouI:false,
+            clicouSubmit:false,
+            areaAssunto:true,
             textoestilo:"txtAreaConteudo",
             textoestiloatual:'teste'
         }
@@ -34,21 +32,51 @@ export default class Post extends React.Component {
         this.clicouBtn= this.clicouBtn.bind(this);
         this.bClique= this.bClique.bind(this);
         this.iClique= this.iClique.bind(this);
+        this.area_Assunto = this.area_Assunto.bind(this);
     }
 
 handleSubmit(e){
+    e.preventDefault();
+
+    if(!this.clicouSubmit){
 
         this.setState({
             comments:[
                 ...this.state.comments,
                {assunto: this.state.novoAssuntoText,
                 conteudo:this.state.novoConteudoText}
-            ]
+            ],
+            clicouSubmit:true,
+            areaAssunto: false
         })
 
         this.setState({novoAssuntoText:''})
         this.setState({novoConteudoText:''})
-        e.preventDefault();
+        
+     }else{
+
+        this.setState({
+            clicouSubmit:false,
+            areaAssunto: true
+        })
+      }
+
+     // this.area_Assunto()
+
+    }
+
+    area_Assunto(){
+        //e.preventDefault();
+        console.log("entrou aqui no area Assunto")
+        if(!this.state.areaAssunto){
+            this.setState({
+                areaAssunto:true
+            })
+        }else{
+            this.setState({
+                areaAssunto: false
+            }) 
+        }
     }
 
     handleAssuntoChange(e){
@@ -61,7 +89,6 @@ handleSubmit(e){
     }
 
     handleKeyDown(e) {
-        
         e.target.style.height = 'inherit';
         e.target.style.height = `${e.target.scrollHeight}px`; 
         // e.target.style.height = `${Math.min(e.target.scrollHeight,limit)}px`;
@@ -86,7 +113,6 @@ handleSubmit(e){
         console.log(`${'Italico situacao: '+ this.state.clicouI}`)
         this.clicouBtn()
     }
-
 
     clicouBtn(e){   
         console.log(this.state.clicouB)
@@ -129,52 +155,70 @@ handleSubmit(e){
         return(
         <div>
 
-            <div className = {this.props.visibilidade}>
+            <div className={this.state.areaAssunto ? "areaAssuntoVisible" : "areaAssuntoInvisible"}>
 
-            <div  className = "div_txt_topico">
-                <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-            </div>
+                <div className = {this.props.visibilidade}>
 
-            <form onSubmit={this.handleSubmit}>
+                <div  className = "div_txt_topico">
+                    <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+                </div>
 
-            <label >
-                <b>Assunto</b>
-                <textarea
-                id="assunto" 
-                rows="1"  
-                placeholder="Defina um tópico sucinto para notificar os autores..." 
-                className ='txtAreaAssunto' 
-                onChange={this.handleAssuntoChange}
-                value = {this.state.novoAssuntoText}
-                required>
-                </textarea>
-            </label>
+                <form onSubmit={this.handleSubmit}>
 
-            <label>
-                <b >Conteudo</b>
-                <textarea  
-                id="conteudo"   
-                rows="4" 
-                className ={this.state.textoestilo}
-                onKeyDown={this.handleKeyDown}
-                onChange={this.handleConteudoChange}
-                value ={this.state.novoConteudoText} 
-                required 
-                >
-                </textarea>
-            </label>
+                <label >
+                    <b>Assunto</b>
+                    <textarea
+                    id="assunto" 
+                    rows="1"  
+                    placeholder="Defina um tópico sucinto para notificar os autores..." 
+                    className ='txtAreaAssunto' 
+                    onChange={this.handleAssuntoChange}
+                    value = {this.state.novoAssuntoText}
+                    required>
+                    </textarea>
+                </label>
 
-            <div className="div_Estilo_txt">
-                <div className="div_Img_1"> <img onClick={this.bClique} src={img_B}></img></div>
-                <div className="div_Img_2"> <img onClick={this.iClique} src={img_I}></img></div>
-                <div className="btn_enviar">
-                <BtnEnviar type="submit" text ="enviar"></BtnEnviar>
+                <label>
+                    <b >Conteudo</b>
+                    <textarea  
+                    id="conteudo"   
+                    rows="4" 
+                    className ={this.state.textoestilo}
+                    onKeyDown={this.handleKeyDown}
+                    onChange={this.handleConteudoChange}
+                    value ={this.state.novoConteudoText} 
+                    required 
+                    >
+                    </textarea>
+                </label>
+
+                <div className="div_Estilo_txt">
+                    <div className="div_Img_1"> <img onClick={this.bClique} src={img_B}></img></div>
+                    <div className="div_Img_2"> <img onClick={this.iClique} src={img_I}></img></div>
+                    <div className="btn_enviar">
+                    <BtnEnviar type="submit" text ="enviar"></BtnEnviar>
+                    </div>
+                </div>
+                
+                </form>
                 </div>
             </div>
-            </form>
+
+            
+            <div className= {this.state.areaAssunto ? "compartilheNotVisible_b" : "compartilheVisible_b"}>
+            <div className="divCompartilhe_1">
+             <p className="txtCompartilhe_1">Seu tópico foi enviado com sucesso! :D </p>
             </div>
-
-
+            <div className="divCompartilhe_2b">
+             <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+            </div>
+            <div className="link_descubra_mais">
+            <a>Descubra outros trabalhos!</a>
+            </div>
+            <div className = 'btn_topico'>
+            <BtnCriarTopico2 onPress = {this.area_Assunto}  text= "criar novo tópico"/>
+            </div>
+            </div>
 
             {this.state.comments.map((item,index)=>{
                 console.log(item)

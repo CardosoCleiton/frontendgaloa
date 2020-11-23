@@ -1,6 +1,6 @@
 import React from 'react'
 
-import  Bt_CriarTopico from './btnCriarTopicoStyle'
+import Bt_CriarTopico from './btnCriarTopicoStyle'
 import plus_plus from '../images/plus_plus_.svg'
 
 export default class BtnCriarTopico extends React.Component{
