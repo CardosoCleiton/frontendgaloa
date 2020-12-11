@@ -1,11 +1,35 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../styles/elements/footer.css';
 import logo_galoa from '../images/logotipo_galoa.png'
 
 function Footer(){
+
+  const [changeOFF,setChangeOFF] = useState(false);
+  
+  document.body.onresize = function() {
+        
+    var x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if (x < 1380) {
+        setChangeOFF (true);
+        //console.log(`${x}`)
+       // console.log(`${changeOFF}`)
+        return 
+        
+    }else{
+        setChangeOFF (false);
+        //console.log(`${x}`);
+       // console.log(`${changeOFF}`);
+        return
+    }
+  }
+
+
+
+
   return (    
       <footer>
-        <section className="container">
+        <section className={changeOFF ? "containercenter":"containeright"}>
 	       <div className="item">
            <div className="logo" >
               <img src={logo_galoa} alt="logo_galoa" className="logo_Galoa"/>

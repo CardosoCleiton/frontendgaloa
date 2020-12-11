@@ -1,7 +1,29 @@
-.sectionFather{
+.sectionFatheright{
 
     position:relative;
-    margin:auto;
+    margin-left:auto;
+
+    background-color:white;
+
+    flex-direction: column;
+    display:block;
+
+    width: 1146px;
+    min-height:auto;
+    max-height: auto;
+
+    font: Quicksand;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #5C5C5C;
+    padding-bottom: 30px;
+}
+
+.sectionFathercenter{
+
+    position:relative;
+    margin-left:auto;
 
     background-color:white;
 

@@ -19,8 +19,30 @@ function Title(props:TitleProps){
 }
 
 function Header(){
+
+  const [changeOFF,setChangeOFF] = useState(false);
+  
+  document.body.onresize = function() {
+        
+    var x = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if (x < 1380) {
+        setChangeOFF (true);
+       // console.log(`${x}`)
+       // console.log(`${changeOFF}`)
+        return 
+        
+    }else{
+        setChangeOFF (false);
+        //console.log(`${x}`);
+       // console.log(`${changeOFF}`);
+        return
+    }
+  }
+
+
   return (
-       <header id="header">
+       <header id={changeOFF ? "headercenter":"headeright"}>
 
           <div className="main_title">
             <div className="div_text_top_header">

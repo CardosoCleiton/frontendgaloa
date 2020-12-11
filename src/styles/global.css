@@ -8,6 +8,7 @@
   body {
     -webkit-font-smoothing: antialiased !important;
     font: 600 18px Roboto, sans-serif;
+    background:rgb(113,71,142)
   }
   
   body html #root {
